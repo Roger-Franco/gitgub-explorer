@@ -11,6 +11,19 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  devServer: {
+    // contentBase: path.resolve(__dirname, 'public'),
+    static: {
+      directory: path.join(__dirname, "public/")
+    },
+    // port: 3000,
+    // // publicPath
+    // devMiddleware:{
+    //    publicPath: "https://localhost:3000/dist/",
+    // }
+    // // hotOnly
+    // hot: "only",
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html')
